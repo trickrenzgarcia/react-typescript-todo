@@ -1,6 +1,6 @@
 .input {
   display: flex;
-  width: 90vw;
+  width: 95vw;
   position: relative;
   align-items: center;
 }
@@ -36,4 +36,106 @@
 .input__button:active {
   transform: scale(0.8);
   box-shadow: 0 0 5px black;
+}
+
+.container {
+  display: flex;
+  width: 95%;
+  margin-top: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.todos {
+  display: flex;
+  width: 47.5%;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f44336;
+}
+
+.todos__heading {
+  font-size: 30px;
+  
+}
+
+.todos__single{
+  display: flex;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 15px;
+  background-image: url("https://img.freepik.com/free-photo/birthday-decoration_23-2148124342.jpg");
+  transition: 0.2s;
+}
+
+.todos__single:hover {
+  box-shadow: 0 0 5px black;
+  transform: scale(1.03);
+}
+
+.todos__single--text {
+  flex: 1;
+  padding: 5px;
+  border:none;
+  font-size: 20px;
+}
+
+.todos__single--text:focus {
+  outline: none;
+}
+
+.icon {
+  margin-left: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+  .input {
+    width: 95%;
+  }
+  .todos {
+    width: 45%;
+    margin-bottom: 10px;
+  }
+  .container{
+    width: 95%;
+    justify-items: center;
+    flex-direction: row;
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 700px) {
+  .input {
+    width: 95%;
+  }
+  .todos {
+    width: 95%;
+    margin-bottom: 10px;
+  }
+
+  .container{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.dragactive {
+  background-color: rgb(240, 57, 57);
+}
+
+.dragcomplete {
+  background-color: rgb(46, 187, 76);
+}
+
+.drag {
+  box-shadow: 0 0 20px black;
+}
+
+
+.remove {
+  background-color:#7cb342;
 }
